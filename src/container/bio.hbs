@@ -4,8 +4,155 @@
 --}}
 
 <div>
+	<div>
+		<h1>{{name}}</h1>
+	</div>
 
+	<br>
+
+	<div>
+		<ul>
+			<li><b>birthdate:</b> {{birthdate}}</li>
+			<li><b>birthplace:</b> {{birthplace}}</li>
+			<li><b>deathdate:</b> {{deathdate}}</li>
+			<li><b>deathplace:</b> {{deathplace}}</li>
+			<li><b>nationality:</b> {{nationality}}</li>
+			<li><b>occupation:</b> {{occupation}}</li>
+			<li><b>known for:</b> {{known_for}}</li>
+
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+
+			<li><b>education:</b>
+
+				<br>
+				<br>
+
+				<ul>
+					{{#each education}}
+					<li>degree: {{degree}}</li>
+					<li>field: {{field}}</li>
+					<li>institution: {{institution}}</li>
+					<li>year: {{year}}</li>
+					{{/each}}
+				</ul>
+			</li>
+
+			<br>
+			<br>
+
+			<li><b>notable publications:</b>
+
+				<br>
+				<br>
+
+				{{#each notable_publications}}
+				<ul>
+					<br>
+					<li>title: {{title}}</li>
+					<li>year: {{year}}</li>
+					<li>publisher: {{publisher}}</li>
+				</ul>
+				{{/each}}
+			</li>
+
+			<br>
+			<br>
+
+			<li><b>partners:</b>
+
+				<br>
+				<br>
+
+				{{#each partners}}
+				<ul>
+					<br>
+					<li>name: {{name}}</li>
+					<li>relationship: {{relationship}}</li>
+					<li>years: {{years}}</li>
+				</ul>
+				{{/each}}
+			</li>
+
+			<br>
+			<br>
+
+			<li><b>awards:</b>
+
+				<br>
+				<br>
+
+				<ul>
+					{{#each awards}}
+					<li>title: {{title}}</li>
+					<li>year: {{year}}</li>
+					<li>description: {{description}}</li>
+					{{/each}}
+				</ul>
+			</li>
+
+			<br>
+			<br>
+
+			<li><b>influences:</b> {{influences}}</li>
+			<li><b>influenced:</b> {{influenced}}</li>
+
+			<br>
+			<br>
+
+			<li><b>quotes:</b>
+
+				<br>
+				<br>
+
+				<ul>
+					{{#each quotes}}
+					<li><q>{{this}}</q></li>
+					{{/each}}
+				</ul>
+			</li>
+
+			<br>
+			<br>
+
+			<li><b>major discoveries:</b>
+
+				<br>
+				<br>
+
+				<ul>
+					{{#each major_discoveries}}
+					<li>title: {{title}}</li>
+					<li>year: {{year}}</li>
+					<li>description: {{description}}</li>
+					{{/each}}
+				</ul>
+			</li>
+
+			<br>
+			<br>
+
+			<li><b>contributions:</b>
+
+				<br>
+				<br>
+
+				<ul>
+					{{#with contributions}}
+					<li>title: {{title}}</li>
+					<li>description: {{description}}</li>
+					<li>year: {{year}}</li>
+					<li>field: {{field}}</li>
+					{{/with}}
+				</ul>
+			</li>
+		</ul>
+	</div>
 </div>
+
 
 
 {{!--
