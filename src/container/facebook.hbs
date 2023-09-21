@@ -1,0 +1,228 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+
+<div class="m-3">
+
+	<div class="border border-primary"></div>
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Dropdown
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+		aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+	<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+		id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<p>Try scrolling the rest of the page to see this option in action.</p>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div class="text-bg-primary p-3">
+		<h1>{{name}}</h1>
+	</div>
+
+	<br>
+
+	<div>
+		<h2>Users</h2>
+
+		<br>
+
+		<ul>
+			{{#each users}}
+			<div class="alert alert-primary" role="alert">
+				<li><b>id:</b> {{id}} </li>
+				<li><b>name:</b> {{name}}</li>
+				<li><b>gender:</b> {{gender}}</li>
+				<li><b>age:</b> {{age}}</li>
+				<li>
+					<b>friends</b>
+					<ul>
+						{{#each friends}}
+						<li><b>id:</b> {{id}}</li>
+						<li><b>name:</b> {{name}}</li>
+						<li><b>gender:</b> {{gender}}</li>
+						<li><b>age:</b> {{age}}</li>
+						<li>
+							<b>mutual friends</b>
+							<ul>
+								{{#each mutual_friends}}
+								<li><b>id:</b> {{id}}</li>
+								<li><b>name:</b> {{name}}</li>
+								<li><b>gender:</b> {{gender}}</li>
+								<li><b>age:</b> {{age}}</li>
+								{{/each}}
+							</ul>
+						</li>
+						{{/each}}
+					</ul>
+				</li>
+			</div>
+
+			<br>
+
+			<div class="alert alert-secondary" role="alert">
+				<li>
+					<b>groups</b>
+					<ul>
+						{{#each groups}}
+						<li><b>id:</b> {{id}} </li>
+						<li><b>name:</b> {{name}}</li>
+						<li><b>description:</b> {{description}}</li>
+						<li>
+							<b>members</b>
+							<ul>
+								{{#each members}}
+								<br>
+								<li><b>id:</b> {{id}}</li>
+								<li><b>name:</b> {{name}}</li>
+								<li><b>gender:</b> {{gender}}</li>
+								<li><b>age:</b> {{age}}</li>
+								{{/each}}
+							</ul>
+						</li>
+
+						{{/each}}
+					</ul>
+				</li>
+			</div>
+
+			<br>
+
+			<div>
+				<li>
+					<b>friends</b>
+					<ul>
+						{{#each friends}}
+
+						<div class="alert alert-warning" role="alert">
+							<li>
+								<b>mutual friends</b>
+								<ul>
+									{{#each mutual_friends}}
+									<li><b>id:</b> {{id}}</li>
+									<li><b>name:</b> {{name}}</li>
+									<li><b>gender:</b> {{gender}}</li>
+									<li><b>age:</b> {{age}}</li>
+
+									<li>
+										<b>mutual friends</b>
+										<ul>
+											{{#each mutual_friends}}
+											<li><b>id:</b> {{id}}</li>
+											<li><b>name:</b> {{name}}</li>
+											<li><b>gender:</b> {{gender}}</li>
+											<li><b>age:</b> {{age}}</li>
+											{{/each}}
+										</ul>
+									</li>
+
+									{{/each}}
+								</ul>
+							</li>
+						</div>
+
+
+						<div class="alert alert-secondary" role="alert">
+							<li>
+								<b>groups</b>
+								<ul>
+									{{#each groups}}
+									<li><b>id:</b> {{id}}</li>
+									<li><b>name:</b> {{name}}</li>
+									<li><b>description:</b> {{description}}</li>
+									<li>
+										<b>members:</b>
+										<ul>
+											{{#each members}}
+											<br>
+											<li><b>id:</b> {{id}}</li>
+											<li><b>name:</b> {{name}}</li>
+											<li><b>gender:</b> {{gender}}</li>
+											<li><b>age:</b> {{age}}</li>
+											{{/each}}
+										</ul>
+									</li>
+
+									{{/each}}
+								</ul>
+							</li>
+						</div>
+
+						{{/each}}
+					</ul>
+				</li>
+			</div>
+
+			{{/each}}
+		</ul>
+	</div>
+
+	<nav aria-label="Page navigation example" class="text-bg-primary p-3">
+		<ul class="pagination">
+			<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">Next</a></li>
+		</ul>
+	</nav>
+
+</div>
+
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
