@@ -1,0 +1,101 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div class="m-3">
+
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-primary">Javascript</button>
+		<button type="button" class="btn btn-link">Link</button>
+
+		<h1>{{name}} </h1>
+	</div>
+
+	<br>
+
+	<div>
+		<p><b>description:</b> {{description}}</p>
+
+		{{#with history}}
+		<p><b>year:</b> {{year}}</p>
+		<p><b>founder:</b> {{founder}}</p>
+		{{/with}}
+	</div>
+
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-secondary">Types of data</button>
+
+		<br>
+
+		<h3>Types of data</h3>
+		<li>{{types}}</li>
+	</div>
+
+	<br>
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-success">Syntax</button>
+		<h3>Syntax</h3>
+		{{#with syntax}}
+		<li>{{variables}}</li>
+		<li>{{functions}}</li>
+		<li>{{conditionals}}</li>
+		<li>{{loops}}</li>
+		<li>{{classes}}</li>
+		{{/with}}
+	</div>
+
+	<br>
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-danger">Features</button>
+		<h3>Features</h3>
+		<li>{{features}}</li>
+	</div>
+
+	<br>
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-info">Libraries</button>
+		<h3>Libraries</h3>
+		<li>{{libraries}}</li>
+	</div>
+
+	<br>
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-light">Tools</button>
+		<h3>Tools</h3>
+		<li>{{tools}}</li>
+	</div>
+
+	<br>
+	<br>
+
+	<div>
+		<button type="button" class="btn btn-dark">Community</button>
+		<h3>Community</h3>
+		{{#each community}}
+		<ul>
+			<li><b>name:</b>{{name}}</li>
+			<li><b>type:</b>{{type}}</li>
+		</ul>
+		{{/each}}
+	</div>
+
+</div>
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
