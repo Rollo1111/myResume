@@ -1,0 +1,354 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div class="m-3">
+
+	<button class="btn btn-primary" type="button" disabled>
+		<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+		<span class="visually-hidden" role="status">Loading...</span>
+	</button>
+	<button class="btn btn-primary" type="button" disabled>
+		<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+		<span role="status">Loading...</span>
+	</button>
+
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Apple MacBook Pro</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Features</li>
+		</ol>
+	</nav>
+
+	<div class="alert alert-dark" role="alert">
+		<h1>{{name}}</h1>
+	</div>
+
+	<br>
+
+	<div>
+		<p><b>description:</b> {{description}}</p>
+		<p><b>price:</b> {{price}}</p>
+		<p><b>category:</b> {{category}}</p>
+	</div>
+
+	<br>
+	<hr>
+	<br>
+
+	<div>
+		<p class="d-inline-flex gap-1">
+			<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+				aria-expanded="false" aria-controls="collapseExample">
+				Link with href
+			</a>
+			<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+				aria-expanded="false" aria-controls="collapseExample">
+				Button with data-bs-target
+			</button>
+		</p>
+		<div class="collapse" id="collapseExample">
+			<div class="card card-body">
+				Some placeholder content for the collapse component. This panel is hidden by default but revealed when
+				the user activates the relevant trigger.
+			</div>
+		</div>
+
+		<br>
+
+		<h2>Features</h2>
+
+		<br>
+
+		<ul>
+			{{#with features}}
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Processor
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Brand</a></li>
+						<li><a class="dropdown-item" href="#">Model</a></li>
+						<li><a class="dropdown-item" href="#">Speed</a></li>
+						<li><a class="dropdown-item" href="#">Cores</a></li>
+						<li><a class="dropdown-item" href="#">Cache</a></li>
+					</ul>
+				</div>
+
+				<h4>Processor</h4>
+				<ul>
+					{{#with processor}}
+					<li><b>brand:</b> {{brand}}</li>
+					<li><b>model:</b> {{model}}</li>
+					<li><b>speed:</b> {{speed}}</li>
+					<li><b>cores:</b> {{cores}}</li>
+					<li><b>cache:</b> {{cache}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Memory
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Type</a></li>
+						<li><a class="dropdown-item" href="#">Size</a></li>
+						<li><a class="dropdown-item" href="#">Speed</a></li>
+
+					</ul>
+				</div>
+
+				<h4>Memory</h4>
+				<ul>
+					{{#with memory}}
+					<li><b>type:</b> {{type}}</li>
+					<li><b>size:</b> {{size}}</li>
+					<li><b>speed:</b> {{speed}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Storage
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Type</a></li>
+						<li><a class="dropdown-item" href="#">Size</a></li>
+
+					</ul>
+				</div>
+
+				<h4>Storage</h4>
+				<ul>
+					{{#with storage}}
+					<li><b>type:</b> {{type}}</li>
+					<li><b>size:</b> {{size}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Display
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Size</a></li>
+						<li><a class="dropdown-item" href="#">Resolution</a></li>
+						<li><a class="dropdown-item" href="#">Technology</a></li>
+						<li><a class="dropdown-item" href="#">Color space</a></li>
+						<li><a class="dropdown-item" href="#">Brightness</a></li>
+						<li><a class="dropdown-item" href="#">Refresh rate</a></li>
+					</ul>
+				</div>
+
+				<h4>Display</h4>
+				<ul>
+					{{#with display}}
+					<li><b>size:</b> {{size}}</li>
+					<li><b>resolution:</b> {{resolution}}</li>
+					<li><b>technology:</b> {{technology}}</li>
+					<li><b>color space:</b> {{color_space}}</li>
+					<li><b>brightness:</b> {{brightness}}</li>
+					<li><b>refresh rate:</b> {{refresh_rate}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Graphics
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Brand</a></li>
+						<li><a class="dropdown-item" href="#">Model</a></li>
+						<li><a class="dropdown-item" href="#">Memory</a></li>
+
+					</ul>
+				</div>
+
+				<h4>Graphics</h4>
+				<ul>
+					{{#with graphics}}
+					<li><b>brand:</b> {{brand}}</li>
+					<li><b>model:</b> {{model}}</li>
+					<li><b>memory:</b> {{memory}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Ports
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Type</a></li>
+						<li><a class="dropdown-item" href="#">Count</a></li>
+						<li><a class="dropdown-item" href="#">Features</a></li>
+					</ul>
+				</div>
+
+				<h4>Ports</h4>
+				<ul>
+					{{#each ports}}
+
+					<li><b>type:</b> {{type}}</li>
+					<li><b>count:</b> {{count}}</li>
+					{{#if features}}
+					<li>
+						<b>features:</b>
+						{{features}}
+					</li>
+					{{/if}}
+					{{/each}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Battery
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Type</a></li>
+						<li><a class="dropdown-item" href="#">Capacity</a></li>
+						<li><a class="dropdown-item" href="#">Life</a></li>
+					</ul>
+				</div>
+
+				<h4>Battery</h4>
+				<ul>
+					{{#with battery}}
+					<li><b>type:</b> {{type}}</li>
+					<li><b>capacity:</b> {{capacity}}</li>
+					<li><b>life:</b> {{life}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Weight
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Weight</a></li>
+					</ul>
+				</div>
+
+				<h4>Weight</h4>
+				<ul>
+					<li>{{weight}}</li>
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Dimensions
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Height</a></li>
+						<li><a class="dropdown-item" href="#">Width</a></li>
+						<li><a class="dropdown-item" href="#">Depth</a></li>
+					</ul>
+				</div>
+
+				<h4>Dimensions</h4>
+				<ul>
+					{{#with dimensions}}
+					<li><b>height:</b> {{height}}</li>
+					<li><b>width:</b> {{width}}</li>
+					<li><b>depth:</b> {{depth}}</li>
+					{{/with}}
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Operating system
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Operating system</a></li>
+					</ul>
+				</div>
+
+				<h4>Operating system</h4>
+				<ul>
+					<li>{{operating_system}}</li>
+				</ul>
+			</div>
+
+			<br>
+
+			<div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Accessories
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Name</a></li>
+						<li><a class="dropdown-item" href="#">Price</a></li>
+					</ul>
+				</div>
+
+				<h4>Accessories</h4>
+				<ul>
+					{{#each accessories}}
+					<br>
+					<li><b>name:</b> {{name}}</li>
+					<li><b>price:</b> {{price}}</li>
+					{{/each}}
+				</ul>
+			</div>
+
+			{{/with}}
+		</ul>
+	</div>
+
+</div>
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
