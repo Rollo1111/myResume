@@ -1,0 +1,117 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div class="m-3">
+
+	{{#with page_header}}
+
+	<h1 class="text-center text-uppercase">{{title}}</h1>
+	<div class="alert alert-primary" role="alert">{{description}}</div>
+
+	{{/with}}
+
+	<br>
+
+	<div class="card">
+		<div class="card-body">
+			{{#with section}}
+
+			{{#with about_us}}
+
+			{{#with title_list}}
+			<h2>{{main}}</h2>
+			<div>{{sub}}</div>
+			{{/with}}
+
+			<br>
+
+			{{#with button}}
+			<button class=" btn btn-outline-info">{{text}}</button>
+			{{/with}}
+
+			{{/with}}
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div class="card">
+		<div class="card-body">
+			{{#with advantage}}
+			<h3>{{title}}</h3>
+
+			<div class="card">
+				<div class="card-body">
+					{{#with efficiency}}
+					<h4>{{title}}</h4>
+					<h5>{{sub_title}}</h5>
+					<p>{{description}}</p>
+					<button class="btn btn-outline-warning">{{button}}</button>
+					{{/with}}
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="card">
+				<div class="card-body">
+					{{#with innovation}}
+					<h4>{{title}}</h4>
+					<h5>{{sub_title}}</h5>
+					<p>{{description}}</p>
+					<button class="btn btn-outline-warning">{{button}}</button>
+					{{/with}}
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="card">
+				<div class="card-body">
+					{{#with collaboration}}
+					<h4>{{title}}</h4>
+					<h5>{{sub_title}}</h5>
+					<p>{{description}}</p>
+					<button class="btn btn-outline-warning">{{button}}</button>
+					{{/with}}
+				</div>
+			</div>
+
+			{{/with}}
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div class="card">
+		<div class="card-body">
+			{{#with agreement}}
+			<h3>{{title}}</h3>
+
+			{{#with info}}
+			<h5>{{sub_title}}</h5>
+
+			{{#with detail}}
+			<p>{{text}}</p>
+			<button class="btn btn-success">{{button}}</button>
+			{{/with}}
+
+			{{/with}}
+
+			{{/with}}
+		</div>
+	</div>
+
+	{{/with}}
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
