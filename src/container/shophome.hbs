@@ -10,14 +10,12 @@
 		<hr>
 
 		{{#with navigation}}
-		<div class="col-12">
-			<div class="nav">
-				{{#each links}}
-				<div class="nav-item">
-					<a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
-				</div>
-				{{/each}}
+		<div class="nav pb-3">
+			{{#each links}}
+			<div class="nav-item">
+				<a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
 			</div>
+			{{/each}}
 		</div>
 		{{/with}}
 
