@@ -45,8 +45,8 @@
 				<div class="col-6 mb-3 mt-3">
 					{{#with surname}}
 					<label class="form-label">{{label}}</label>
-					<input class="form-control form-control-sm">
-					<b>{{placeholder}}</b>
+					<input class="form-control form-control-sm" placeholder={{placeholder}}>
+
 					<div class="form-text">{{caption}}</div>
 					{{/with}}
 				</div>
@@ -55,8 +55,7 @@
 				<div class="col-6 mb-3 mt-3">
 					{{#with name}}
 					<label class="form-label">{{label}}</label>
-					<input class="form-control form-control-sm">
-					<b>{{placeholder}}</b>
+					<input class="form-control form-control-sm" placeholder={{placeholder}}>
 					<div class="form-text">{{caption}}</div>
 					{{/with}}
 				</div>
@@ -66,8 +65,7 @@
 				<div class="col-6 mb-3 mt-3">
 					{{#with phone}}
 					<label class="form-label">{{label}}</label>
-					<input class="form-control form-control-sm">
-					<b>{{placeholder}}</b>
+					<input class="form-control form-control-sm" placeholder={{placeholder}}>
 					<div class="form-text">{{caption}}</div>
 					{{/with}}
 				</div>
@@ -76,8 +74,7 @@
 				<div class="col-6 mb-3 mt-3">
 					{{#with email}}
 					<label class="form-label">{{label}}</label>
-					<input class="form-control form-control-sm">
-					<b>{{placeholder}}</b>
+					<input class="form-control form-control-sm" placeholder={{placeholder}}>
 					<div class="form-text">{{caption}}</div>
 					{{/with}}
 				</div>
@@ -186,13 +183,13 @@
 			<div class="col-12">
 				<div class="row">
 					{{#with delivery}}
-					<h3 class="mt-5">{{title}}</h3>
+					<h3 class="mt-5 mb-3">{{title}}</h3>
 
 					<div class="card">
 						<div class="card-body">
-							<div class="col-5">
-								<div class="row">
-									{{#each select}}
+							<div class="row">
+								{{#each select}}
+								<div class="col-6">
 									<label class="form-label">{{label}}</label>
 									<select class="form-select form-select-sm">{{placeholder}}
 										<option selected>Вибрати</option>
@@ -200,8 +197,8 @@
 										<option value="{{value}}">{{text}}</option>
 										{{/each}}
 									</select>
-									{{/each}}
 								</div>
+								{{/each}}
 							</div>
 						</div>
 					</div>
@@ -247,8 +244,7 @@
 						<div class="col-6 mb-3 mt-3">
 							{{#with surname}}
 							<label class="form-label">{{label}}</label>
-							<input class="form-control form-control-sm">
-							<b>{{placeholder}}</b>
+							<input class="form-control form-control-sm" placeholder={{placeholder}}>
 							<div class="form-text">{{caption}}</div>
 							{{/with}}
 						</div>
@@ -256,8 +252,7 @@
 						<div class="col-6 mb-3 mt-3">
 							{{#with name}}
 							<label class="form-label">{{label}}</label>
-							<input class="form-control form-control-sm">
-							<b>{{placeholder}}</b>
+							<input class="form-control form-control-sm" placeholder={{placeholder}}>
 							<div class="form-text">{{caption}}</div>
 							{{/with}}
 						</div>
@@ -265,8 +260,7 @@
 						<div class="col-6 mb-3 mt-3">
 							{{#with phone}}
 							<label class="form-label">{{label}}</label>
-							<input class="form-control form-control-sm">
-							<b>{{placeholder}}</b>
+							<input class="form-control form-control-sm" placeholder={{placeholder}}>
 							<div class="form-text">{{caption}}</div>
 							{{/with}}
 						</div>
@@ -274,8 +268,7 @@
 						<div class="col-6 mb-3 mt-3">
 							{{#with email}}
 							<label class="form-label">{{label}}</label>
-							<input class="form-control form-control-sm">
-							<b>{{placeholder}}</b>
+							<input class="form-control form-control-sm" placeholder={{placeholder}}>
 							<div class="form-text">{{caption}}</div>
 							{{/with}}
 						</div>
@@ -288,7 +281,7 @@
 					<div>
 						{{#with coment}}
 						<label class="form-label">{{label}}</label>
-						<input class="form-control form-control-sm"><b>{{placeholder}}</b>
+						<input class="form-control form-control-sm" placeholder={{placeholder}}>
 						{{/with}}
 					</div>
 
@@ -306,8 +299,8 @@
 
 				{{#with availabel_coupon}}
 				<label class="form-label">{{label}}</label>
-				<select class="form-select form-select-lg">{{placeholder}}
-					<option selected>Вибрати</option>
+				<select class="form-select form-select-lg">
+					<option selected>{{placeholder}}</option>
 					{{#each options}}
 					<option value="{{value}}">{{text}}</option>
 					{{/each}}
@@ -316,8 +309,8 @@
 
 				{{#with friend_coupon}}
 				<label class="form-label pt-4">{{label}}</label>
-				<select class="form-select form-select-sm">{{placeholder}}
-					<option selected>Вибрати</option>
+				<select class="form-select form-select-sm">
+					<option selected>{{placeholder}}</option>
 					{{#each options}}
 					<option value="{{value}}">{{text}}</option>
 					{{/each}}
@@ -329,13 +322,13 @@
 				{{#with add}}
 				{{#with friend}}
 				<label class="form-label pt-4">{{label}}</label>
-				<input class="form-control form-control-lg"><b>{{placeholder}}</b>
+				<input class="form-control form-control-lg" placeholder={{placeholder}}>
 				<div class="form-text">{{caption}}</div>
 				{{/with}}
 
 				{{#with colleague}}
 				<label class="form-label pt-4">{{label}}</label>
-				<input class="form-control form-control-sm"><b>{{placeholder}}</b>
+				<input class="form-control form-control-sm" placeholder={{placeholder}}>
 				<div class="form-text">{{caption}}</div>
 				{{/with}}
 				{{/with}}
