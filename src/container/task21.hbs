@@ -5,11 +5,11 @@
 
 <div class="m-3">
 
-	<div class="card">
+	<div class="card my-5">
 		<div class="card-body">
 			{{#with heading}}
 
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 
 					{{#with main}}
@@ -18,14 +18,10 @@
 						<h1>{{title}}</h1>
 					</div>
 
-					<br>
-
 					<p>{{text}}</p>
 
 					{{#with button_text}}
-					<div><button class="btn btn-primary">{{solid}}</button></div>
-
-					<br>
+					<div><button class="btn btn-primary mb-2">{{solid}}</button></div>
 
 					<div><button class=" btn btn-outline-primary">{{outline}}</button></div>
 					{{/with}}
@@ -34,10 +30,7 @@
 				</div>
 			</div>
 
-			<br>
-			<br>
-
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 
 					{{#with second}}
@@ -46,14 +39,10 @@
 						<h2>{{title}}</h2>
 					</div>
 
-					<br>
-
 					<p>{{text}}</p>
 
 					{{#with button_text}}
-					<div><button class="btn btn-secondary">{{solid}}</button></div>
-
-					<br>
+					<div><button class="btn btn-secondary mb-2">{{solid}}</button></div>
 
 					<div><button class=" btn btn-outline-secondary">{{outline}}</button></div>
 					{{/with}}
@@ -62,10 +51,7 @@
 				</div>
 			</div>
 
-			<br>
-			<br>
-
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 
 					{{#with subblock}}
@@ -74,14 +60,10 @@
 						<h2>{{title}}</h2>
 					</div>
 
-					<br>
-
 					<p>{{text}}</p>
 
 					{{#with button_text}}
-					<div><button class="btn btn-dark">{{solid}}</button></div>
-
-					<br>
+					<div><button class="btn btn-dark mb-2">{{solid}}</button></div>
 
 					<div><button class="btn btn-outline-dark">{{outline}}</button></div>
 					{{/with}}
@@ -94,10 +76,7 @@
 		</div>
 	</div>
 
-	<br>
-	<br>
-
-	<div class="card">
+	<div class="card my-5">
 		<div class="card-body">
 
 			{{#with nested_display}}
@@ -106,7 +85,7 @@
 				<h3>{{title}}</h3>
 			</div>
 
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 
 					{{#with children_display}}
@@ -114,8 +93,6 @@
 					<div>
 						<h4>{{title}}</h4>
 					</div>
-
-					<br>
 
 					<p>{{text}}</p>
 
@@ -126,8 +103,6 @@
 					{{/with}}
 				</div>
 			</div>
-
-			<br>
 
 			<h5>{{header_text}}</h5>
 
@@ -140,10 +115,7 @@
 		</div>
 	</div>
 
-	<br>
-	<br>
-
-	<div class="card">
+	<div class="card my-5">
 		<div class="card-body">
 
 			{{#with paragraph}}
@@ -151,8 +123,6 @@
 			<div>
 				<h3>{{title}}</h3>
 			</div>
-
-			<br>
 
 			<p>{{text}}</p>
 
@@ -162,11 +132,7 @@
 				{{/with}}
 			</button>
 
-
-			<br>
-			<br>
-
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 
 					<ul>

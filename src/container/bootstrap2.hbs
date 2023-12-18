@@ -3,33 +3,9 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
-	{{#with main}}
-	<main>
-		<section>
-			<div class="mb-4">
-				{{> title data=summary.title big=true}}
-			</div>
-			<div>
-				<p>
-					{{summary.text}}
-				</p>
-			</div>
-		</section>
-
-		{{#with experience}}
-		<section>
-			<div class="mb-4">{{> title data=title}}</div>
-			<div>
-				<p>
-					{{text}}
-				</p>
-			</div>
-		</section>
-		{{/with}}
-	</main>
-	{{/with}}
-</div>
+<main class="p-5">
+	<h1>Hello world!</h1>
+</main>
 
 
 {{!--

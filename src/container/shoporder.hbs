@@ -8,15 +8,17 @@
 
 	<hr class="mt-5">
 
-	{{#with navigation}}
-	<div class="nav">
-		{{#each links}}
-		<div class="nav-item">
-			<a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
+	<div class="text-bg-info">
+		{{#with navigation}}
+		<div class="nav">
+			{{#each links}}
+			<div class="nav-item">
+				<a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
+			</div>
+			{{/each}}
 		</div>
-		{{/each}}
+		{{/with}}
 	</div>
-	{{/with}}
 
 	<hr>
 
@@ -390,7 +392,7 @@
 
 	<hr class="mt-5">
 
-	<div class="nav px-2">
+	<div class="nav text-bg-info px-2">
 		{{#each footer}}
 		<div class="nav-item">
 			{{#each this}}

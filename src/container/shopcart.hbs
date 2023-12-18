@@ -2,15 +2,17 @@
 
 	<hr class="mt-5">
 
-	{{#with navigation}}
-	<div class="nav">
-		{{#each links}}
-		<div class="nav-item">
-			<a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
+	<div class="text-bg-info">
+		{{#with navigation}}
+		<div class="nav">
+			{{#each links}}
+			<div class="nav-item">
+				<a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
+			</div>
+			{{/each}}
 		</div>
-		{{/each}}
+		{{/with}}
 	</div>
-	{{/with}}
 
 	<hr class="mb-5">
 
@@ -76,13 +78,13 @@
 
 	<hr class="mt-5 mb-5">
 
-	<div class="text-bg-dark">
+	<div class="text-bg-dark p-2">
 		{{#with subscribe}}
 		<h2 class="mx-2">{{header}}</h2>
 		<p class="mx-2">{{description}}</p>
 		{{#each buttons}}
 		<div>
-			<a href="{{link}}" class="btn btn-primary my-2 mx-2">{{text}}</a>
+			<a href="{{link}}" class="btn btn-primary mb-2 mx-2">{{text}}</a>
 		</div>
 		{{/each}}
 		{{/with}}
@@ -90,7 +92,7 @@
 
 	<hr class="mt-5">
 
-	<div class="nav">
+	<div class="nav text-bg-info">
 		{{#each footer}}
 		<div class="nav-item">
 			{{#each this}}

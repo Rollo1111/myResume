@@ -7,14 +7,12 @@
 
 	{{#with page_header}}
 
-	<h1 class="text-center text-uppercase">{{title}}</h1>
-	<div class="alert alert-primary" role="alert">{{description}}</div>
+	<h1 class=" text-bg-primary text-warning text-center text-uppercase mt-5">{{title}}</h1>
+	<div class="alert alert-primary mt-3 mb-5" role="alert">{{description}}</div>
 
 	{{/with}}
 
-	<br>
-
-	<div class="card">
+	<div class="card mb-5">
 		<div class="card-body">
 			{{#with section}}
 
@@ -25,25 +23,20 @@
 			<div>{{sub}}</div>
 			{{/with}}
 
-			<br>
-
 			{{#with button}}
-			<button class=" btn btn-outline-info">{{text}}</button>
+			<button class=" btn btn-outline-info mt-3">{{text}}</button>
 			{{/with}}
 
 			{{/with}}
 		</div>
 	</div>
 
-	<br>
-	<br>
-
-	<div class="card">
+	<div class="card mb-5">
 		<div class="card-body">
 			{{#with advantage}}
 			<h3>{{title}}</h3>
 
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 					{{#with efficiency}}
 					<h4>{{title}}</h4>
@@ -54,10 +47,7 @@
 				</div>
 			</div>
 
-			<br>
-			<br>
-
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 					{{#with innovation}}
 					<h4>{{title}}</h4>
@@ -68,10 +58,7 @@
 				</div>
 			</div>
 
-			<br>
-			<br>
-
-			<div class="card">
+			<div class="card my-3">
 				<div class="card-body">
 					{{#with collaboration}}
 					<h4>{{title}}</h4>
@@ -86,10 +73,7 @@
 		</div>
 	</div>
 
-	<br>
-	<br>
-
-	<div class="card">
+	<div class="card mb-5">
 		<div class="card-body">
 			{{#with agreement}}
 			<h3>{{title}}</h3>

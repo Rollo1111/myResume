@@ -7,16 +7,18 @@
 	{{#with main}}
 	<main>
 		<section>
-			{{> title data='Work history' big=true}}
+			<h1 class="mb-3 mt-2">
+				{{> title data='Work history' big=true}}
+			</h1>
 			<div>
 				<ul>
 					{{#each works}}
 					<li>
-						<div>{{position}}</div>
+						<div class="mb-3">
+							{{position}}
+						</div>
 
-						<br>
-
-						<div>
+						<div class="mb-3">
 							{{duration.from}} -
 							{{#if duration.to}}
 							{{duration.to}}
@@ -24,8 +26,6 @@
 							(досі працюємо)
 							{{/if}}
 						</div>
-
-						<br>
 
 						<div>
 							{{#if company.url}}
@@ -35,58 +35,41 @@
 							{{/if}}
 						</div>
 
-						<br>
-						<br>
-
-						<div>
-							<strong>Projects ({{projectAmount}})</strong>
-						</div>
-
-						<br>
+						<h4 class="mb-3 mt-5">
+							Projects ({{projectAmount}})
+						</h4>
 
 						<ul>
 							{{#each projects}}
 							<li>
-								<div>{{> link text=name href=url blank=true noLine=true}}</div>
-
-								<br>
-								<br>
-
-								<div>
-									<b>{{about}}</b>
+								<div class="mb-3">
+									{{> link text=name href=url blank=true noLine=true}}
 								</div>
 
-								<br>
-								<br>
+								<h4 class="mb-3 mt-5">{{about}}</h4>
 
-								<div>
-									<em>Project stacks ({{stackAmount}})</em>
+								<div class="my-3">
+									<mark>Project stacks ({{stackAmount}})</mark>
 								</div>
-
-								<br>
 
 								<div>
 									<ul>
 										{{#each stacks}}
-										<li>
+										<li class="my-2">
 											{{name}}
 										</li>
 										{{/each}}
 									</ul>
 								</div>
 
-								<br>
-
-								<div>
-									<em>Project awards ({{awardAmount}})</em>
+								<div class="my-3">
+									<mark>Project awards ({{awardAmount}})</mark>
 								</div>
-
-								<br>
 
 								<div>
 									<ul>
 										{{#each awards}}
-										<li>
+										<li class="my-2">
 											{{name}}
 										</li>
 										{{/each}}

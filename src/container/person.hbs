@@ -6,11 +6,9 @@
 <div>
 	{{#with person}}
 
-	<div>
+	<div class="text-bg-primary text-warning">
 		<h1>{{name}}</h1>
 	</div>
-
-	<br>
 
 	<div>
 		<ul>
@@ -19,10 +17,7 @@
 		</ul>
 	</div>
 
-	<br>
-	<hr>
-	<br>
-	<br>
+	<hr class="my-5">
 
 	<div>
 		<h2>Address</h2>
@@ -37,9 +32,7 @@
 		</ul>
 	</div>
 
-	<br>
-
-	<div>
+	<div class="my-4">
 		<h2>Education</h2>
 		<ul>
 			{{#each education}}
@@ -51,9 +44,7 @@
 		</ul>
 	</div>
 
-	<br>
-
-	<div>
+	<div class="my-4">
 		<h2>Work experience</h2>
 		<ul>
 			{{#each workExperience}}
@@ -68,10 +59,7 @@
 			<li>year founded: {{year_founded}}</li>
 			<li>industry: {{industry}}</li>
 
-
-			<br>
-
-			<div>
+			<div class="my-4">
 				<h2>Employees</h2>
 				<ul>
 					{{#each employees}}
@@ -79,10 +67,7 @@
 					<li>position: {{position}}</li>
 					<li>department: {{department}}</li>
 
-					<br>
-					<br>
-
-					<h3>Projects</h3>
+					<h3 class="my-4">Projects</h3>
 
 					<ul>
 						{{#each projects}}
@@ -90,10 +75,7 @@
 						<li>description: {{description}}</li>
 						<li>status: {{status}}</li>
 
-						<br>
-						<br>
-
-						<h3>Teams</h3>
+						<h3 class="my-4">Teams</h3>
 
 						<ul>
 							{{#each teams}}
@@ -102,10 +84,7 @@
 							<li>team leader title: {{team_leader.title}}</li>
 							<li>team leader email: {{team_leader.email}}</li>
 
-							<br>
-							<br>
-
-							<h3>Team members</h3>
+							<h3 class="my-4">Team members</h3>
 
 							<ul>
 								{{#each team_members}}
@@ -114,10 +93,7 @@
 								<li>email: {{email}}</li>
 								<li>skills: {{skills}}</li>
 
-								<br>
-								<br>
-
-								<h3>Projects</h3>
+								<h3 class="my-4">Projects</h3>
 
 								<ul>
 									{{#each projects}}
@@ -125,10 +101,7 @@
 									<li>description: {{description}}</li>
 									<li>technologies: {{technologies}}</li>
 
-									<br>
-									<br>
-
-									<h3>Team members</h3>
+									<h3 class="my-4">Team members</h3>
 
 									<ul>
 										{{#each team_members}}
