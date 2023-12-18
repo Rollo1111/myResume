@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="p-3">
+<body class="m-3">
 	{{#with header}}
 	<header>
 		<div class="mb-2">
@@ -37,14 +37,17 @@
 			</em>
 		</div>
 
-		<hr class="my-5">
-
+		<hr class="mt-5">
+		<div class="text-bg-info">
+			<div class="mb-3">
+				{{> nav}}
+			</div>
+		</div>
+		<hr>
 	</header>
 	{{/with}}
 
-	<div class="mb-3">
-		{{> nav}}
-	</div>
+
 
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}

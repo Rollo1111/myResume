@@ -4,32 +4,24 @@
 --}}
 
 <div>
-	<div>
+	<div class="text-bg-primary text-warning">
 		<h1>{{name}}</h1>
 	</div>
 
-	<br>
+	<hr class="my-5">
 
 	<div>
 		<ul>
-			<li><b>birthdate:</b> {{birthdate}}</li>
-			<li><b>birthplace:</b> {{birthplace}}</li>
-			<li><b>deathdate:</b> {{deathdate}}</li>
-			<li><b>deathplace:</b> {{deathplace}}</li>
-			<li><b>nationality:</b> {{nationality}}</li>
-			<li><b>occupation:</b> {{occupation}}</li>
-			<li><b>known for:</b> {{known_for}}</li>
+			<li class="mb-3"><b>birthdate:</b> {{birthdate}}</li>
+			<li class="mb-3"><b>birthplace:</b> {{birthplace}}</li>
+			<li class="mb-3"><b>deathdate:</b> {{deathdate}}</li>
+			<li class="mb-3"><b>deathplace:</b> {{deathplace}}</li>
+			<li class="mb-3"><b>nationality:</b> {{nationality}}</li>
+			<li class="mb-3"><b>occupation:</b> {{occupation}}</li>
+			<li class="mb-3"><b>known for:</b> {{known_for}}</li>
 
-			<br>
-			<br>
-			<hr>
-			<br>
-			<br>
 
-			<li><b>education:</b>
-
-				<br>
-				<br>
+			<li class="mb-3"><b>education:</b>
 
 				<ul>
 					{{#each education}}
@@ -41,13 +33,7 @@
 				</ul>
 			</li>
 
-			<br>
-			<br>
-
-			<li><b>notable publications:</b>
-
-				<br>
-				<br>
+			<li class="mb-3"><b>notable publications:</b>
 
 				{{#each notable_publications}}
 				<ul>
@@ -59,13 +45,7 @@
 				{{/each}}
 			</li>
 
-			<br>
-			<br>
-
-			<li><b>partners:</b>
-
-				<br>
-				<br>
+			<li class="mb-3"><b>partners:</b>
 
 				{{#each partners}}
 				<ul>
@@ -77,13 +57,7 @@
 				{{/each}}
 			</li>
 
-			<br>
-			<br>
-
-			<li><b>awards:</b>
-
-				<br>
-				<br>
+			<li class="mb-3"><b>awards:</b>
 
 				<ul>
 					{{#each awards}}
@@ -94,19 +68,10 @@
 				</ul>
 			</li>
 
-			<br>
-			<br>
+			<li class="mb-3"><b>influences:</b> {{influences}}</li>
+			<li class="mb-3"><b>influenced:</b> {{influenced}}</li>
 
-			<li><b>influences:</b> {{influences}}</li>
-			<li><b>influenced:</b> {{influenced}}</li>
-
-			<br>
-			<br>
-
-			<li><b>quotes:</b>
-
-				<br>
-				<br>
+			<li class="mb-3"><b>quotes:</b>
 
 				<ul>
 					{{#each quotes}}
@@ -115,13 +80,7 @@
 				</ul>
 			</li>
 
-			<br>
-			<br>
-
-			<li><b>major discoveries:</b>
-
-				<br>
-				<br>
+			<li class="mb-3"><b>major discoveries:</b>
 
 				<ul>
 					{{#each major_discoveries}}
@@ -132,13 +91,7 @@
 				</ul>
 			</li>
 
-			<br>
-			<br>
-
 			<li><b>contributions:</b>
-
-				<br>
-				<br>
 
 				<ul>
 					{{#with contributions}}

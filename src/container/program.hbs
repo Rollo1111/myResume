@@ -8,7 +8,7 @@
 
 	{{#with excursion}}
 
-	<div>
+	<div class="text-bg-primary text-warning">
 		<h1>{{name}}</h1>
 	</div>
 
@@ -18,16 +18,11 @@
 		{{/with}}
 	</div>
 
-	<br>
-
 	<div>
 		{{date}}
 	</div>
 
-	<br>
-	<br>
-	<hr>
-	<br>
+	<hr class="my-5">
 
 	<div>
 		<h2>Program</h2>
@@ -38,9 +33,7 @@
 			<li><b>type:</b> {{type}}</li>
 			<li><b>duration: </b>{{duration}}</li>
 
-			<br>
-
-			<h3>Details</h3>
+			<h3 class="mt-3">Details</h3>
 			<ul>
 				{{#with details}}
 
@@ -57,9 +50,7 @@
 						{{/with}}
 					</ul>
 
-					<br>
-
-					<h3>Exhibits</h3>
+					<h3 class="mt-3">Exhibits</h3>
 					{{#each exhibits}}
 					<ul>
 						<br>
@@ -83,11 +74,9 @@
 					</ul>
 					{{/each}}
 
-					<br>
-
 					<ul>
 						{{#with guide}}
-						<h3>Guide</h3>
+						<h3 class="mt-3">Guide</h3>
 						<li><b>name: </b>{{name}}</li>
 						<li><b>language:</b> {{language}}</li>
 						<li><b>rating:</b> {{rating}}</li>
@@ -119,21 +108,17 @@
 					{{/with}}
 				</ul>
 
-				<br>
-
 				<ul>
 					{{#each performers}}
-					<h3>Performers</h3>
+					<h3 class="mt-3">Performers</h3>
 					<li><b>name:</b> {{name}}</li>
 					<li><b>type:</b> {{type}}</li>
 					{{/each}}
 				</ul>
 
-				<br>
-
 				<ul>
 					{{#with guide}}
-					<h3>Guide</h3>
+					<h3 class="mt-3">Guide</h3>
 					<li><b>name: </b>{{name}}</li>
 					<li><b>language:</b> {{language}}</li>
 					<li><b>rating:</b> {{rating}}</li>

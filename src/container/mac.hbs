@@ -21,11 +21,9 @@
 		</ol>
 	</nav>
 
-	<div class="alert alert-dark" role="alert">
+	<div class="text-bg-primary text-warning">
 		<h1>{{name}}</h1>
 	</div>
-
-	<br>
 
 	<div>
 		<p><b>description:</b> {{description}}</p>
@@ -33,9 +31,7 @@
 		<p><b>category:</b> {{category}}</p>
 	</div>
 
-	<br>
-	<hr>
-	<br>
+	<hr class="my-5">
 
 	<div>
 		<p class="d-inline-flex gap-1">
@@ -55,290 +51,268 @@
 			</div>
 		</div>
 
-		<br>
-
-		<h2>Features</h2>
-
-		<br>
+		<h2 class="mb-3">Features</h2>
 
 		<ul>
 			{{#with features}}
 
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Processor
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Brand</a></li>
-						<li><a class="dropdown-item" href="#">Model</a></li>
-						<li><a class="dropdown-item" href="#">Speed</a></li>
-						<li><a class="dropdown-item" href="#">Cores</a></li>
-						<li><a class="dropdown-item" href="#">Cache</a></li>
+			<div class="row">
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Processor
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Brand</a></li>
+							<li><a class="dropdown-item" href="#">Model</a></li>
+							<li><a class="dropdown-item" href="#">Speed</a></li>
+							<li><a class="dropdown-item" href="#">Cores</a></li>
+							<li><a class="dropdown-item" href="#">Cache</a></li>
+						</ul>
+					</div>
+
+					<h4 class="mt-3 mb-2">Processor</h4>
+					<ul>
+						{{#with processor}}
+						<li><b>brand:</b> {{brand}}</li>
+						<li><b>model:</b> {{model}}</li>
+						<li><b>speed:</b> {{speed}}</li>
+						<li><b>cores:</b> {{cores}}</li>
+						<li><b>cache:</b> {{cache}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Processor</h4>
-				<ul>
-					{{#with processor}}
-					<li><b>brand:</b> {{brand}}</li>
-					<li><b>model:</b> {{model}}</li>
-					<li><b>speed:</b> {{speed}}</li>
-					<li><b>cores:</b> {{cores}}</li>
-					<li><b>cache:</b> {{cache}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Memory
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Type</a></li>
+							<li><a class="dropdown-item" href="#">Size</a></li>
+							<li><a class="dropdown-item" href="#">Speed</a></li>
 
-			<br>
+						</ul>
+					</div>
 
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Memory
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Type</a></li>
-						<li><a class="dropdown-item" href="#">Size</a></li>
-						<li><a class="dropdown-item" href="#">Speed</a></li>
-
+					<h4 class="mt-3 mb-2">Memory</h4>
+					<ul>
+						{{#with memory}}
+						<li><b>type:</b> {{type}}</li>
+						<li><b>size:</b> {{size}}</li>
+						<li><b>speed:</b> {{speed}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Memory</h4>
-				<ul>
-					{{#with memory}}
-					<li><b>type:</b> {{type}}</li>
-					<li><b>size:</b> {{size}}</li>
-					<li><b>speed:</b> {{speed}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Storage
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Type</a></li>
+							<li><a class="dropdown-item" href="#">Size</a></li>
 
-			<br>
+						</ul>
+					</div>
 
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Storage
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Type</a></li>
-						<li><a class="dropdown-item" href="#">Size</a></li>
-
+					<h4 class="mt-3 mb-2 p-2">Storage</h4>
+					<ul>
+						{{#with storage}}
+						<li><b>type:</b> {{type}}</li>
+						<li><b>size:</b> {{size}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Storage</h4>
-				<ul>
-					{{#with storage}}
-					<li><b>type:</b> {{type}}</li>
-					<li><b>size:</b> {{size}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Display
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Size</a></li>
+							<li><a class="dropdown-item" href="#">Resolution</a></li>
+							<li><a class="dropdown-item" href="#">Technology</a></li>
+							<li><a class="dropdown-item" href="#">Color space</a></li>
+							<li><a class="dropdown-item" href="#">Brightness</a></li>
+							<li><a class="dropdown-item" href="#">Refresh rate</a></li>
+						</ul>
+					</div>
 
-			<br>
-
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Display
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Size</a></li>
-						<li><a class="dropdown-item" href="#">Resolution</a></li>
-						<li><a class="dropdown-item" href="#">Technology</a></li>
-						<li><a class="dropdown-item" href="#">Color space</a></li>
-						<li><a class="dropdown-item" href="#">Brightness</a></li>
-						<li><a class="dropdown-item" href="#">Refresh rate</a></li>
+					<h4 class="mt-3 mb-2">Display</h4>
+					<ul>
+						{{#with display}}
+						<li><b>size:</b> {{size}}</li>
+						<li><b>resolution:</b> {{resolution}}</li>
+						<li><b>technology:</b> {{technology}}</li>
+						<li><b>color space:</b> {{color_space}}</li>
+						<li><b>brightness:</b> {{brightness}}</li>
+						<li><b>refresh rate:</b> {{refresh_rate}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Display</h4>
-				<ul>
-					{{#with display}}
-					<li><b>size:</b> {{size}}</li>
-					<li><b>resolution:</b> {{resolution}}</li>
-					<li><b>technology:</b> {{technology}}</li>
-					<li><b>color space:</b> {{color_space}}</li>
-					<li><b>brightness:</b> {{brightness}}</li>
-					<li><b>refresh rate:</b> {{refresh_rate}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class=" card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Graphics
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Brand</a></li>
+							<li><a class="dropdown-item" href="#">Model</a></li>
+							<li><a class="dropdown-item" href="#">Memory</a></li>
 
-			<br>
+						</ul>
+					</div>
 
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Graphics
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Brand</a></li>
-						<li><a class="dropdown-item" href="#">Model</a></li>
-						<li><a class="dropdown-item" href="#">Memory</a></li>
-
+					<h4 class="mt-3 mb-2">Graphics</h4>
+					<ul>
+						{{#with graphics}}
+						<li><b>brand:</b> {{brand}}</li>
+						<li><b>model:</b> {{model}}</li>
+						<li><b>memory:</b> {{memory}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Graphics</h4>
-				<ul>
-					{{#with graphics}}
-					<li><b>brand:</b> {{brand}}</li>
-					<li><b>model:</b> {{model}}</li>
-					<li><b>memory:</b> {{memory}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Ports
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Type</a></li>
+							<li><a class="dropdown-item" href="#">Count</a></li>
+							<li><a class="dropdown-item" href="#">Features</a></li>
+						</ul>
+					</div>
 
-			<br>
+					<h4 class="mt-3 mb-2">Ports</h4>
+					<ul>
+						{{#each ports}}
 
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Ports
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Type</a></li>
-						<li><a class="dropdown-item" href="#">Count</a></li>
-						<li><a class="dropdown-item" href="#">Features</a></li>
+						<li><b>type:</b> {{type}}</li>
+						<li><b>count:</b> {{count}}</li>
+						{{#if features}}
+						<li>
+							<b>features:</b>
+							{{features}}
+						</li>
+						{{/if}}
+						{{/each}}
 					</ul>
 				</div>
 
-				<h4>Ports</h4>
-				<ul>
-					{{#each ports}}
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Battery
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Type</a></li>
+							<li><a class="dropdown-item" href="#">Capacity</a></li>
+							<li><a class="dropdown-item" href="#">Life</a></li>
+						</ul>
+					</div>
 
-					<li><b>type:</b> {{type}}</li>
-					<li><b>count:</b> {{count}}</li>
-					{{#if features}}
-					<li>
-						<b>features:</b>
-						{{features}}
-					</li>
-					{{/if}}
-					{{/each}}
-				</ul>
-			</div>
-
-			<br>
-
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Battery
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Type</a></li>
-						<li><a class="dropdown-item" href="#">Capacity</a></li>
-						<li><a class="dropdown-item" href="#">Life</a></li>
+					<h4 class="mt-3 mb-2">Battery</h4>
+					<ul>
+						{{#with battery}}
+						<li><b>type:</b> {{type}}</li>
+						<li><b>capacity:</b> {{capacity}}</li>
+						<li><b>life:</b> {{life}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Battery</h4>
-				<ul>
-					{{#with battery}}
-					<li><b>type:</b> {{type}}</li>
-					<li><b>capacity:</b> {{capacity}}</li>
-					<li><b>life:</b> {{life}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Weight
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Weight</a></li>
+						</ul>
+					</div>
 
-			<br>
-
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Weight
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Weight</a></li>
+					<h4 class="mt-3 mb-2">Weight</h4>
+					<ul>
+						<li>{{weight}}</li>
 					</ul>
 				</div>
 
-				<h4>Weight</h4>
-				<ul>
-					<li>{{weight}}</li>
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Dimensions
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Height</a></li>
+							<li><a class="dropdown-item" href="#">Width</a></li>
+							<li><a class="dropdown-item" href="#">Depth</a></li>
+						</ul>
+					</div>
 
-			<br>
-
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Dimensions
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Height</a></li>
-						<li><a class="dropdown-item" href="#">Width</a></li>
-						<li><a class="dropdown-item" href="#">Depth</a></li>
+					<h4 class="mt-3 mb-2">Dimensions</h4>
+					<ul>
+						{{#with dimensions}}
+						<li><b>height:</b> {{height}}</li>
+						<li><b>width:</b> {{width}}</li>
+						<li><b>depth:</b> {{depth}}</li>
+						{{/with}}
 					</ul>
 				</div>
 
-				<h4>Dimensions</h4>
-				<ul>
-					{{#with dimensions}}
-					<li><b>height:</b> {{height}}</li>
-					<li><b>width:</b> {{width}}</li>
-					<li><b>depth:</b> {{depth}}</li>
-					{{/with}}
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Operating system
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Operating system</a></li>
+						</ul>
+					</div>
 
-			<br>
-
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Operating system
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Operating system</a></li>
+					<h4 class="mt-3 mb-2">Operating system</h4>
+					<ul>
+						<li>{{operating_system}}</li>
 					</ul>
 				</div>
 
-				<h4>Operating system</h4>
-				<ul>
-					<li>{{operating_system}}</li>
-				</ul>
-			</div>
+				<div class="card col-4 my-2 mx-1 p-2">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Accessories
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Name</a></li>
+							<li><a class="dropdown-item" href="#">Price</a></li>
+						</ul>
+					</div>
 
-			<br>
-
-			<div>
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
-						Accessories
-					</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Name</a></li>
-						<li><a class="dropdown-item" href="#">Price</a></li>
+					<h4 class="mt-3 mb-2">Accessories</h4>
+					<ul>
+						{{#each accessories}}
+						<br>
+						<li><b>name:</b> {{name}}</li>
+						<li><b>price:</b> {{price}}</li>
+						{{/each}}
 					</ul>
 				</div>
-
-				<h4>Accessories</h4>
-				<ul>
-					{{#each accessories}}
-					<br>
-					<li><b>name:</b> {{name}}</li>
-					<li><b>price:</b> {{price}}</li>
-					{{/each}}
-				</ul>
 			</div>
 
 			{{/with}}

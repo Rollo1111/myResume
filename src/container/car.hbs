@@ -27,29 +27,26 @@
 	</div>
 
 	<div>
-		<h1>{{make}} {{model}}</h1>
+		<h1 class="my-3 text-bg-primary text-warning">{{make}} {{model}}</h1>
 	</div>
-
-	<br>
 
 	<div>
 		<p><b>year:</b> {{year}}</p>
 		<p><b>color:</b> {{color}}</p>
 	</div>
 
-	<hr>
-	<br>
+	<hr class="my-5">
 
 	<div>
-		<h3 class="alert alert-primary" role="alert">Features</h3>
+		<h3 class="alert alert-primary mt-5 mb-3" role="alert">Features</h3>
 		<ul>
 			{{#with features}}
 
-			<h4>Interior</h4>
+			<h4 class="my-4">Interior</h4>
 			<ul>
 				{{#with interior}}
 
-				<h5>Seats</h5>
+				<h5 class="my-1">Seats</h5>
 				<ul>
 					{{#with seats}}
 					<li><b>material:</b> {{material}}</li>
@@ -73,9 +70,7 @@
 					{{/with}}
 				</ul>
 
-				<br>
-
-				<h5>Dashboard</h5>
+				<h5 class="mt-3 mb-2">Dashboard</h5>
 				<ul>
 					{{#with dashboard}}
 					<li><b>material:</b> {{material}}</li>
@@ -101,9 +96,7 @@
 					{{/with}}
 				</ul>
 
-				<br>
-
-				<h5>Audio</h5>
+				<h5 class="mt-3 mb-2">Audio</h5>
 				<ul>
 					{{#with audio}}
 					<li><b>system:</b> {{system}}</li>
@@ -138,13 +131,11 @@
 				{{/with}}
 			</ul>
 
-			<br>
-
-			<h4>Exterior</h4>
+			<h4 class="my-4">Exterior</h4>
 			<ul>
 				{{#with exterior}}
 
-				<h5>Wheels</h5>
+				<h5 class="mb-2">Wheels</h5>
 				<ul>
 					{{#with wheels}}
 					<li><b>size:</b> {{size}}</li>
@@ -153,9 +144,7 @@
 					{{/with}}
 				</ul>
 
-				<br>
-
-				<h5>Headlights</h5>
+				<h5 class="mt-3 mb-2">Headlights</h5>
 				<ul>
 					{{#with headlights}}
 					<li><b>type:</b> {{type}}</li>
@@ -171,9 +160,7 @@
 					{{/with}}
 				</ul>
 
-				<br>
-
-				<h5>Sunroof</h5>
+				<h5 class="mt-3 mb-2">Sunroof</h5>
 				<ul>
 					{{#with sunroof}}
 					<li><b>type:</b> {{type}} </li>
@@ -192,13 +179,11 @@
 				{{/with}}
 			</ul>
 
-			<br>
-
-			<h4>Safety</h4>
+			<h4 class="my-4">Safety</h4>
 			<ul>
 				{{#with safety}}
 
-				<h5>Airbags</h5>
+				<h5 class="mb-2">Airbags</h5>
 				<ul>
 					{{#with airbags}}
 					<li><b>front:</b> {{front}}</li>
@@ -208,9 +193,7 @@
 					{{/with}}
 				</ul>
 
-				<br>
-
-				<h5>Assistance</h5>
+				<h5 class="mt-3 mb-2">Assistance</h5>
 				<ul>
 					{{#with assistance}}
 					<li>
@@ -263,10 +246,8 @@
 		</ul>
 	</div>
 
-	<br>
-
 	<div>
-		<h3 class="alert alert-secondary" role="alert">Engine</h3>
+		<h3 class="alert alert-secondary mt-5 mb-3" role="alert">Engine</h3>
 		<ul>
 			{{#with engine}}
 			<li><b>type:</b> {{type}}</li>
@@ -286,10 +267,8 @@
 		</ul>
 	</div>
 
-	<br>
-
 	<div>
-		<h3 class="alert alert-success" role="alert">Fuel economy</h3>
+		<h3 class="alert alert-success mt-5 mb-3" role="alert">Fuel economy</h3>
 		<ul>
 			{{#with fuel_economy}}
 			<li><b>city:</b> {{city}}</li>
@@ -299,10 +278,8 @@
 		</ul>
 	</div>
 
-	<br>
-
 	<div>
-		<h3 class="alert alert-danger" role="alert">Price</h3>
+		<h3 class="alert alert-danger mt-5 mb-3" role="alert">Price</h3>
 		<ul>
 			{{#with price}}
 			<li><b>base:</b> {{base}}</li>

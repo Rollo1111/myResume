@@ -6,39 +6,37 @@
 <div>
 	{{#with web}}
 
-	<div>
-		<h1>Languages</h1>
-	</div>
 
 	<div>
+		<div class="text-bg-primary text-warning">
+			<h1>Languages</h1>
+		</div>
 		<ul>
 			{{#each languages}}
 
-			<br>
-			<hr>
-			<br>
+			<hr class="my-5">
 
 			<li><b>name:</b> {{name}}</li>
-			<li><b>version:</b> {{version}}</li>
-			<li><b>description:</b> {{description}}</li>
+			<li class="mt-2"><b>version:</b> {{version}}</li>
+			<li class="mt-2"><b>description:</b> {{description}}</li>
 
 			<div>
 				{{#if elements}}
-				<b>elements:</b>
+				<b class="mt-2">elements:</b>
 				{{/if}}
 
 				<ul>
 					{{#each elements}}
-					<li><b>name:</b> {{name}}</li>
-					<li><b>description:</b> {{description}}</li>
+					<li class="mt-2"><b>name:</b> {{name}}</li>
+					<li class="mt-2"><b>description:</b> {{description}}</li>
 					<il>
 						{{#if attributes}}
-						<b>attributes:</b>
+						<b class="mt-2">attributes:</b>
 						{{/if}}
 						<ul>
 							{{#each attributes}}
-							<li><b>name:</b> {{name}}</li>
-							<li><b>description:</b> {{description}}</li>
+							<li class="mt-2"><b>name:</b> {{name}}</li>
+							<li class="mt-2"><b>description:</b> {{description}}</li>
 							{{/each}}
 						</ul>
 					</il>
@@ -48,21 +46,21 @@
 
 			<div>
 				{{#if properties}}
-				<b>properties:</b>
+				<b class="mt-2">properties:</b>
 				{{/if}}
 
 				<ul>
 					{{#each properties}}
-					<li><b>name:</b> {{name}}</li>
-					<li><b>description:</b> {{description}}</li>
+					<li class="mt-2"><b>name:</b> {{name}}</li>
+					<li class="mt-2"><b>description:</b> {{description}}</li>
 					<li>
 						{{#if values}}
-						<b>values:</b>
+						<b class="mt-2">values:</b>
 						{{/if}}
 						<ul>
 							{{#each values}}
-							<li><b>value:</b> {{value}}</li>
-							<li><b>description:</b> {{description}}</li>
+							<li class="mt-2"><b>value:</b> {{value}}</li>
+							<li class="mt-2"><b>description:</b> {{description}}</li>
 							{{/each}}
 						</ul>
 					</li>
@@ -72,22 +70,22 @@
 
 			<div>
 				{{#if functions}}
-				<b>functions:</b>
+				<b class="mt-2">functions:</b>
 				{{/if}}
 
 				<ul>
 					{{#each functions}}
-					<li><b>name:</b> {{name}}</li>
-					<li><b>description:</b>{{description}}</li>
+					<li class="mt-2"><b>name:</b> {{name}}</li>
+					<li class="mt-2"><b>description:</b>{{description}}</li>
 					<li>
 						{{#if parameters}}
-						<b>parameters:</b>
+						<b class="mt-2">parameters:</b>
 						{{/if}}
 						<ul>
 							{{#each parameters}}
-							<li><b>name:</b> {{name}}</li>
-							<li><b>type:</b> {{type}}</li>
-							<li><b>description:</b> {{description}}</li>
+							<li class="mt-2"><b>name:</b> {{name}}</li>
+							<li class="mt-2"><b>type:</b> {{type}}</li>
+							<li class="mt-2"><b>description:</b> {{description}}</li>
 							{{/each}}
 						</ul>
 					</li>
